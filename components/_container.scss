@@ -1,0 +1,82 @@
+@use "./breakpoints" as break;
+@use "../colors" as cl;
+
+.main_container {
+  padding-top: 2em;
+  @include break.breakpoint("medium-min") {
+    padding-inline: 2em;
+    max-width: 80%;
+    margin: auto;
+  }
+  .hero_wrapper {
+    display: flex;
+    margin: auto;
+    align-items: end;
+    justify-content: space-between;
+    @include break.breakpoint("medium") {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .hero_text_main {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      padding-inline: 2em;
+      @include break.breakpoint("medium") {
+        text-align: center;
+        max-width: 100%;
+      }
+      .m_text {
+        margin: auto;
+
+        h1 {
+          @include break.breakpoint("medium") {
+            font-size: 3em;
+          }
+          font-size: 5em;
+          font-weight: 900;
+        }
+        p {
+          font-size: 18px;
+          margin-block: 1em;
+          color: cl.$med_gray;
+          max-width: 25em;
+        }
+      }
+      .get-in-touch {
+        button {
+          padding: 1em;
+          background-color: cl.$alm_black;
+          font-size: 18px;
+          color: cl.$alm_white;
+          border-radius: 20px;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            background-color: cl.$alm_white;
+            color: cl.$alm_black;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+      }
+
+      .sponsor_brand {
+        @include break.breakpoint("medium-min") {
+          margin-top: 5em;
+          max-width: 30em;
+        }
+        display: flex;
+      }
+    }
+  }
+
+  picture,
+  img,
+  svg,
+  source {
+    display: block;
+    width: 100%;
+  }
+}

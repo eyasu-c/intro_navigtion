@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="shortcut icon"
+      href="./dist/images/logo_white.svg"
+      type="image/x-icon"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="shortcut icon"
+      href="./dist/images/logo_black.svg"
+      type="image/x-icon"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="menu_wrapper">
+          <div class="logo">
+            <img src="./dist/images/logo.svg" alt="" class="logo_svg" />
+          </div>
+          <div class="links_menu">
+            <div class="link_wrapper features">
+              <span>Features</span>
+              <img src="./dist/images/icon-arrow-down.svg" alt="" />
+              <div class="drop_down_list">
+                <div class="list">
+                  <img src="./dist/images/icon-todo.svg" alt="" />
+                  <h5>Todo List</h5>
+                </div>
+                <div class="list">
+                  <img src="./dist/images/icon-calendar.svg" alt="" />
+                  <h5>Calendar</h5>
+                </div>
+                <div class="list">
+                  <img src="./dist/images/icon-reminders.svg" alt="" />
+                  <h5>Reminders</h5>
+                </div>
+                <div class="list">
+                  <img src="./dist/images/icon-planning.svg" alt="" />
+                  <h5>Planning</h5>
+                </div>
+              </div>
+            </div>
+            <div class="link_wrapper company">
+              <span>Company</span>
+              <img src="./dist/images/icon-arrow-down.svg" alt="" />
+              <div class="sec_drop_down">
+                <h5>History</h5>
+                <h5>Our Team</h5>
+                <h5>Blog</h5>
+              </div>
+            </div>
+            <div class="link_wrapper">
+              <span>Careers</span>
+            </div>
+            <div class="link_wrapper">
+              <span>About</span>
+            </div>
+          </div>
+        </div>
+        <div class="subscription_wrapper">
+          <div class="button btn_login">
+            <button>Login</button>
+          </div>
+          <div class="button btn_register">
+            <button>Register</button>
+          </div>
+          <div class="mobile_activator">
+            <img src="./dist/images/icon-menu.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <aside id="aside_menu_bar" class="aside_menu">
+      <div class="cover_wrapper">
+        <div class="menu_bar_wrapper">
+          <div class="close">
+            <img src="./dist/images/icon-close-menu.svg" alt="" />
+          </div>
+          <div class="menu_link_wrapper">
+            <div class="_links">
+              <div class="link uplink feature">
+                <h5>Features</h5>
+                <img
+                  class="popdown"
+                  src="./dist/images/icon-arrow-down.svg"
+                  alt=""
+                />
+                <img
+                  class="popup"
+                  src="./dist/images/icon-arrow-up.svg"
+                  alt=""
+                />
+              </div>
+              <div class="drop_down_lists drop_A">
+                <div class="list">
+                  <img src="./dist/images/icon-todo.svg" alt="" />
+                  <h5>Todo List</h5>
+                </div>
+                <div class="list">
+                  <img src="./dist/images/icon-calendar.svg" alt="" />
+                  <h5>Calendar</h5>
+                </div>
+                <div class="list">
+                  <img src="./dist/images/icon-reminders.svg" alt="" />
+                  <h5>Reminders</h5>
+                </div>
+                <div class="list">
+                  <img src="./dist/images/icon-planning.svg" alt="" />
+                  <h5>Planning</h5>
+                </div>
+              </div>
+            </div>
+            <div class="_links">
+              <div class="link uplink2 companyA">
+                <h5>Company</h5>
+                <img
+                  class="popdown"
+                  src="./dist/images/icon-arrow-down.svg"
+                  alt=""
+                />
+                <img
+                  class="popup"
+                  src="./dist/images/icon-arrow-up.svg"
+                  alt=""
+                />
+              </div>
+              <div class="drop_down_lists drop_B">
+                <h5 class="list">History</h5>
+                <h5 class="list">Our Team</h5>
+                <h5 class="list">Blog</h5>
+              </div>
+            </div>
+            <div class="_links">
+              <h5>Careers</h5>
+            </div>
+            <div class="_links">
+              <h5>About</h5>
+            </div>
+          </div>
+          <div class="subscription">
+            <div class="buttons">
+              <button>Login</button>
+            </div>
+            <div class="buttons btn_register">
+              <button>Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="main_container">
+      <div class="hero_wrapper">
+        <div class="hero_text_wrapper">
+          <div class="hero_text_main">
+            <div class="m_text">
+              <h1>
+                Make<br />
+                remote work
+              </h1>
+              <p class="slogan">
+                Get your team in sync, no matter your location. Streamline
+                processes, create team rituals, and watch productivity soar.
+              </p>
+            </div>
+            <div class="get-in-touch">
+              <button class="get-button">Learn more</button>
+            </div>
+            <div class="sponsor_brand">
+              <svg width="80" height="30" xmlns="http://www.w3.org/2000/svg">
+                <image
+                  href="./dist/images/client-databiz.svg"
+                  height="30"
+                  width="80"
+                />
+              </svg>
+              <svg width="80" height="30" xmlns="http://www.w3.org/2000/svg">
+                <image
+                  href="./dist/images/client-audiophile.svg"
+                  height="30"
+                  width="80"
+                />
+              </svg>
+              <svg width="80" height="30" xmlns="http://www.w3.org/2000/svg">
+                <image
+                  href="./dist/images/client-meet.svg"
+                  height="30"
+                  width="80"
+                />
+              </svg>
+              <svg width="80" height="30" xmlns="http://www.w3.org/2000/svg">
+                <image
+                  href="./dist/images/client-maker.svg"
+                  height="30"
+                  width="80"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="hero_image_wrapper">
+          <picture style="max-width: 500px">
+            <source
+              media="(min-width: 768px)"
+              srcset="./dist/images/image-hero-desktop.png"
+            />
+            <img src="./dist/images/image-hero-mobile.png" alt="" />
+          </picture>
+        </div>
+      </div>
+    </main>
+    <footer style="position: fixed; bottom: 1em; width: 100%">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/eyasu-c/" target="_blank">Joshua</a>.
+      </div>
+    </footer>
+    <script src="./dist/js/main.js" defer></script>
+  </body>
+</html>

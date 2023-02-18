@@ -1,0 +1,127 @@
+@use "./breakpoints" as break;
+@use "../colors" as cl;
+
+.cover_wrapper {
+  display: none;
+}
+.cover_wrapper_active {
+  display: block;
+  position: fixed;
+  clip-path: circle(0% 0%, 10% 10%);
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000015;
+  .menu_bar_wrapper {
+    background-color: #fff;
+    width: 15em;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    .close {
+      float: right;
+      margin: 20px;
+      cursor: pointer;
+    }
+  }
+  @include break.breakpoint("medium-min") {
+    display: none;
+  }
+}
+
+.menu_link_wrapper {
+  margin-top: 5em;
+  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+  ._links {
+    display: flex;
+    flex-direction: column;
+    margin-block: 1rem;
+    font-size: 18px;
+    color: cl.$med_gray;
+
+    .link {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      gap: 1em;
+      .popup {
+        display: none;
+      }
+      &.active_indicator {
+        .popup {
+          display: flex;
+        }
+        .popdown {
+          display: none;
+        }
+      }
+      &:hover {
+        color: #000;
+      }
+    }
+    .drop_down_lists {
+      display: none;
+      margin: auto;
+      margin-left: 1rem;
+      flex-direction: column;
+      padding-block: 0.6em;
+      .list {
+        display: flex;
+        gap: 0.8em;
+        margin-block: 0.5em;
+      }
+      h5 {
+        font-size: 14px;
+        color: cl.$med_gray;
+        &:hover {
+          color: #000;
+        }
+      }
+      &.drop_down_list_activate {
+        display: flex;
+      }
+    }
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.subscription {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-direction: column;
+  padding-inline: 1em;
+
+  .buttons {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    button {
+      background-color: transparent;
+      border: none;
+      outline: transparent;
+      font-size: 14px;
+      color: cl.$med_gray;
+      &:hover {
+        color: cl.$alm_black;
+        cursor: pointer;
+      }
+    }
+    &.btn_register {
+      border: 2px solid #777;
+      border-radius: 10px;
+      padding: 6px 10px;
+      &:hover {
+        border: 2px solid #000;
+      }
+    }
+  }
+}

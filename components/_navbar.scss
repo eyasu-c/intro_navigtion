@@ -1,0 +1,130 @@
+@use "../colors" as cl;
+@use "./breakpoints" as break;
+
+.navbar {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  .menu_wrapper {
+    align-items: center;
+    display: flex;
+    gap: 4em;
+    .links_menu {
+      @include break.breakpoint("medium") {
+        display: none;
+      }
+      display: flex;
+      margin: auto;
+      align-items: center;
+      gap: 20px;
+      .link_wrapper {
+        align-items: center;
+        gap: 10px;
+        display: flex;
+        span {
+          font-weight: 100;
+          font-size: 14px;
+          color: cl.$med_gray;
+          &:hover {
+            color: cl.$alm_black;
+            cursor: pointer;
+          }
+        }
+
+        .drop_down_list {
+          background: #fff;
+          box-shadow: 0 0 20px 0 #ddd;
+          width: 8em;
+          margin: auto;
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          margin-left: -2.4em;
+          margin-top: 12em;
+          border-radius: 9px;
+          gap: 15px;
+          padding-block: 20px;
+          .list {
+            display: flex;
+            margin: auto;
+            gap: 10px;
+            align-items: center;
+            color: cl.$med_gray;
+            &:hover {
+              color: cl.$alm_black;
+              cursor: pointer;
+            }
+          }
+        }
+        .sec_drop_down {
+          background: #fff;
+          box-shadow: 0 0 20px 0 #ddd;
+          width: 6em;
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          margin-top: 10em;
+          border-radius: 9px;
+          text-align: start;
+          align-items: center;
+          gap: 15px;
+          padding-block: 20px;
+          h5 {
+            color: cl.$med_gray;
+            &:hover {
+              color: cl.$alm_black;
+              cursor: pointer;
+            }
+          }
+        }
+        &.features:hover .drop_down_list {
+          display: flex;
+        }
+        &.company:hover .sec_drop_down {
+          display: flex;
+        }
+        .active_down {
+          display: flex;
+        }
+      }
+    }
+  }
+  .subscription_wrapper {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    .button {
+      @include break.breakpoint("medium") {
+        display: none;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        outline: transparent;
+        font-size: 14px;
+        color: cl.$med_gray;
+        &:hover {
+          color: cl.$alm_black;
+          cursor: pointer;
+        }
+      }
+      &.btn_register {
+        border: 2px solid #777;
+        border-radius: 10px;
+        padding: 6px 10px;
+        &:hover {
+          border: 2px solid #000;
+        }
+      }
+    }
+    .mobile_activator {
+      display: none;
+      @include break.breakpoint("medium") {
+        cursor: pointer;
+        display: flex;
+      }
+    }
+  }
+}
